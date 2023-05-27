@@ -23,24 +23,18 @@ namespace PlanlamaOyunu
         }
         Veritabani veritabani = new Veritabani();
        
-
         private void button1_Click(object sender, EventArgs e)
         {
             string kullaniciAdi = textBox1.Text;
             string sifre = textBox2.Text;
-
-            // Kullanıcı adı ve şifresi doğruysa, kullanıcı bilgilerini alıp GirisYapanKullanici sınıfındaki KullaniciBilgileri property'sine atıyoruz.
+           
             if (veritabani.KullaniciKontrol(kullaniciAdi, sifre))
             {
                 Kisiler kullanici = veritabani.KullaniciGetir(kullaniciAdi, sifre);
                 GirisYapanKullanici.KullaniciBilgileri = kullanici;
-
-                // Başka bir form açılırken, bu sınıfta tutulan kullanıcı bilgilerine erişmek için bu örnekteki gibi kullanabilirsiniz:
                  Anasayfa ana = new Anasayfa();
                  ana.KullaniciBilgileri = kullanici;
                  ana.Show();
-
-                // Formu kapatıyoruz.
                 this.Close();
             }
             else

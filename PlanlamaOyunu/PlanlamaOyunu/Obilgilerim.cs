@@ -39,7 +39,7 @@ namespace PlanlamaOyunu
                 {
                     pictureBox1.BackgroundImage = Image.FromFile("C:/Users/gbh/source/repos/PlanlamaOyunu/PlanlamaOyunu/Resources/kırmızızarf.png"); // Kırmızı zarf resmini yükle
                     MessageBox.Show("Tarihi yaklaşmış etkinlikleriniz var.");
-                    break; // İlk kez 1 günden az kalan bir etkinlik bulunduğunda döngüden çık
+                    break; 
                    
                 }
                 else
@@ -56,10 +56,9 @@ namespace PlanlamaOyunu
             string sifre = KullaniciBilgileri.sifre;
             string kad = KullaniciBilgileri.kadi;
             Kisiler kullanici = veritabani.KullaniciGetir(kad, sifre);
-            // Kisiler kullanici = new Kisiler();
             Anasayfa ana = new Anasayfa();
             ana.KullaniciBilgileri = kullanici;
-            ana.Show(); // burda kaldın otanımla kısmına kiml,k bilgisi getirmen, eçilen tarihi textboxlara yazdırman butona basınca kaydetmenlazım kayıt işlemlerini hallettin.
+            ana.Show(); 
             this.Close();
         }
 

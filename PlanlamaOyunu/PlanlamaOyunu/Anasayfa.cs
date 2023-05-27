@@ -25,7 +25,7 @@ namespace PlanlamaOyunu
 
         private void Anasayfa_Load(object sender, EventArgs e)
         {
-            label1.Text = KullaniciBilgileri.kadi; // kullanıcının adını Label kontrolüne yazdırıyoruz
+            label1.Text = KullaniciBilgileri.kadi; 
            
         }
 
@@ -35,10 +35,6 @@ namespace PlanlamaOyunu
 
             if (result == DialogResult.Yes)
             {
-                // Oturumu sonlandır
-                // ...
-
-                // Giriş ekranına geri dön
                 Giriş girisEkrani = new Giriş();
                 this.Hide();
                 girisEkrani.ShowDialog();
@@ -51,10 +47,9 @@ namespace PlanlamaOyunu
             string sifre = KullaniciBilgileri.sifre;
             string kad = KullaniciBilgileri.kadi;
             Kisiler kullanici = veritabani.KullaniciGetir(kad, sifre);
-           // Kisiler kullanici = new Kisiler();
             Otanımla o = new Otanımla();
             o.KullaniciBilgileri = kullanici;
-            o.Show(); // burda kaldın otanımla kısmına kiml,k bilgisi getirmen, eçilen tarihi textboxlara yazdırman butona basınca kaydetmenlazım kayıt işlemlerini hallettin.
+            o.Show(); 
             this.Close();
         }
 
@@ -63,10 +58,9 @@ namespace PlanlamaOyunu
             string sifre = KullaniciBilgileri.sifre;
             string kad = KullaniciBilgileri.kadi;
             Kisiler kullanici = veritabani.KullaniciGetir(kad, sifre);
-            // Kisiler kullanici = new Kisiler();
-           Bilgilerim o = new Bilgilerim();
+            Bilgilerim o = new Bilgilerim();
             o.KullaniciBilgileri = kullanici;
-            o.Show(); // burda kaldın otanımla kısmına kiml,k bilgisi getirmen, eçilen tarihi textboxlara yazdırman butona basınca kaydetmenlazım kayıt işlemlerini hallettin.
+            o.Show(); 
             this.Close();
         }
 
@@ -75,10 +69,9 @@ namespace PlanlamaOyunu
             string sifre = KullaniciBilgileri.sifre;
             string kad = KullaniciBilgileri.kadi;
             Kisiler kullanici = veritabani.KullaniciGetir(kad, sifre);
-            // Kisiler kullanici = new Kisiler();
             Obilgilerim o = new Obilgilerim();
             o.KullaniciBilgileri = kullanici;
-            o.Show(); // burda kaldın otanımla kısmına kiml,k bilgisi getirmen, eçilen tarihi textboxlara yazdırman butona basınca kaydetmenlazım kayıt işlemlerini hallettin.
+            o.Show();
             this.Close();
         }
     }

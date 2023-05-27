@@ -22,9 +22,7 @@ namespace PlanlamaOyunu
         private void Otanımla_Load(object sender, EventArgs e)
         {
             dateTimePicker1.ValueChanged += new EventHandler(dateTimePicker1_ValueChanged);
-            label1.Text = KullaniciBilgileri.kadi; // kullanıcının adını Label kontrolüne yazdırıyoruz
-            //label2.Text = KullaniciBilgileri.kisiId.ToString();
-            //OlayBilgileri.kisiId = KullaniciBilgileri.kisiId;
+            label1.Text = KullaniciBilgileri.kadi; 
         }
         Veritabani veritabani = new Veritabani();
         Olaylar olaylar = new Olaylar();
@@ -61,10 +59,9 @@ namespace PlanlamaOyunu
             string sifre = KullaniciBilgileri.sifre;
             string kad = KullaniciBilgileri.kadi;
             Kisiler kullanici = veritabani.KullaniciGetir(kad, sifre);
-            // Kisiler kullanici = new Kisiler();
             Anasayfa ana = new Anasayfa();
             ana.KullaniciBilgileri = kullanici;
-            ana.Show(); // burda kaldın otanımla kısmına kiml,k bilgisi getirmen, eçilen tarihi textboxlara yazdırman butona basınca kaydetmenlazım kayıt işlemlerini hallettin.
+            ana.Show(); 
             this.Close();
         }
     }

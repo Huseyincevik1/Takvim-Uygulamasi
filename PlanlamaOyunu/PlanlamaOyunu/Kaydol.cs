@@ -45,9 +45,7 @@ namespace PlanlamaOyunu
         {
              Giriş giris = new Giriş();
              giris.Show();
-             this.Hide();
-
-            
+             this.Hide(); 
         }
     }
 }

@@ -35,7 +35,7 @@ namespace PlanlamaOyunu
             }
             catch (Exception ex)
             {
-                // Hata yönetimi yapabilirsiniz
+                
             }
             finally
             {
@@ -103,7 +103,7 @@ namespace PlanlamaOyunu
             }
             catch (Exception ex)
             {
-                // Hata yönetimi yapabilirsiniz
+                
             }
             finally
             {
@@ -131,7 +131,7 @@ namespace PlanlamaOyunu
             }
             catch (Exception ex)
             {
-                // hata durumunda yapılacaklar
+                
             }
             finally
             {
@@ -201,7 +201,7 @@ namespace PlanlamaOyunu
             }
             catch (Exception ex)
             {
-                // hata durumunda yapılacaklar
+                
             }
             finally
             {
